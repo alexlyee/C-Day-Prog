@@ -1,3 +1,5 @@
+#credit to matt!
+
 primes = [2]
 raised_list = []
 factors = []
@@ -14,8 +16,6 @@ def prime_time ():
             primes.append(x)
 
 def factor_test(num):
-    i = 0
-    out = 1
     for x in range(len(raised_list)):
         if num % raised_list[x] == 0:
             factors.append(primes[x])
@@ -33,7 +33,7 @@ exp = int(input("Degree of Root: "))
 prime_time()
 for x in range(len(primes)):
     raised_list.append(primes[x] ** exp)
-num = factor_test(int(input("Number Under the Radical: ")))
+num = factor_test(int(input("Number Under the Radical (radicand) : ")))
 if num == 1:
     print(str(const()))
 else:
